@@ -47,6 +47,7 @@ transition:.3s;
 
 nav a:hover{
 background:#0d47a1;
+border-bottom:3px solid #ffd54f;
 }
 
 .container{
@@ -163,4 +164,7 @@ border-top:1px solid rgba(255,255,255,.2);
 .hero{
 text-align:center;
 padding:40px 20px;
+}
+html{
+scroll-behavior:smooth;
 }
