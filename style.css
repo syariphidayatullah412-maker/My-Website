@@ -110,7 +110,7 @@ color:white;
 padding:12px 20px;
 border-radius:8px;
 text-decoration:none;
-margin-top:10px;
+margin:20px 0;
 }
 
 .btn:hover{
@@ -130,6 +130,7 @@ margin:30px 0;
 .profile h2{
 margin:5px 0;
 color:#0d47a1;
+font-size:24px;
 }
 
 .profile p{
@@ -174,6 +175,8 @@ border-top:1px solid rgba(255,255,255,.2);
 .hero{
 text-align:center;
 padding:40px 20px;
+max-width:1000px;
+margin:auto;
 }
 html{
 scroll-behavior:smooth;
