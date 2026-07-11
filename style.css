@@ -241,3 +241,30 @@ height:1px;
 background:#ddd;
 margin:20px 0;
 }
+/* Accordion */
+.accordion{
+    width:100%;
+    background:#1565c0;
+    color:white;
+    cursor:pointer;
+    padding:18px;
+    border:none;
+    border-radius:10px;
+    text-align:left;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+    margin-bottom:5px;
+}
+
+.accordion:hover{
+    background:#0d47a1;
+}
+
+.panel{
+    display:none;
+    background:white;
+    padding:20px;
+    border:1px solid #ddd;
+    border-radius:0 0 10px 10px;
+}
