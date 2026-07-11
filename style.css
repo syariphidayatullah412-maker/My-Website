@@ -115,8 +115,7 @@ transition:.3s;
 }
 .btn:hover{
 background:#0d47a1;
-transform:scale(1.05);
-transition:.3s;
+transform:translateY(-2px);
 }
 .profile{
 display:flex;
