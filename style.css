@@ -283,3 +283,12 @@ padding:20px;
 border:1px solid #ddd;
 border-radius:0 0 10px 10px;
 }
+.forum-btn{
+display:block;
+width:100%;
+text-align:center;
+margin-top:20px;
+padding:15px;
+font-size:18px;
+font-weight:bold;
+}
