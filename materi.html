@@ -163,7 +163,31 @@ function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
 </script>
+<script>
 
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+const acc=document.querySelectorAll(".accordion");
+
+acc.forEach(item=>{
+item.addEventListener("click",function(){
+
+this.classList.toggle("active");
+
+const panel=this.nextElementSibling;
+
+if(panel.style.display==="block"){
+panel.style.display="none";
+}else{
+panel.style.display="block";
+}
+
+});
+});
+
+</script>
 </body>
 </html>
 
