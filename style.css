@@ -222,3 +222,22 @@ text-align:center;
 }
 
 }
+.materi-btn{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.materi-btn .btn{
+text-align:center;
+flex:1;
+min-width:180px;
+}
+
+hr{
+border:none;
+height:1px;
+background:#ddd;
+margin:20px 0;
+}
