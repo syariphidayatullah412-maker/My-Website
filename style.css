@@ -260,7 +260,15 @@ margin:20px 0;
 .accordion:hover{
     background:#0d47a1;
 }
+.accordion::after{
+content:"+";
+float:right;
+font-size:22px;
+}
 
+.accordion.active::after{
+content:"−";
+}
 .panel{
     display:none;
     background:white;
