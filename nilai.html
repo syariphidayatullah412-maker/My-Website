@@ -229,14 +229,13 @@ Masukkan <strong>Nama</strong> dan <strong>NIM</strong> untuk melihat hasil peni
 <p>© 2026 Hak Cipta Dilindungi</p>
 
 </footer>
-
 <script>
 
 function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
+    document.getElementById("menu").classList.toggle("active");
 }
 
-const mahasiswa=[
+const mahasiswa = [
 
 {
 nama:"Ahmad Fauzi",
@@ -273,16 +272,13 @@ uas:81
 function cekNilai(){
 
 const nama=document.getElementById("nama").value.trim().toLowerCase();
-
 const nim=document.getElementById("nim").value.trim();
 
-const data=mahasiswa.find(m=>
+const data=mahasiswa.find(function(m){
 
-m.nama.toLowerCase()===nama &&
+return m.nama.toLowerCase()===nama && m.nim===nim;
 
-m.nim===nim
-
-);
+});
 
 if(!data){
 
@@ -297,25 +293,19 @@ return;
 const akhir=Math.round(
 
 (data.makalah+
-
 data.artikel1+
-
 data.artikel2+
-
 data.uts+
-
 data.uas)/5
 
 );
 
-let huruf="E";
-
-let status="🔴 BELUM LULUS";
+let huruf="";
+let status="";
 
 if(akhir>=85){
 
 huruf="A";
-
 status="🟢 LULUS";
 
 }
@@ -323,5 +313,44 @@ status="🟢 LULUS";
 else if(akhir>=75){
 
 huruf="B";
+status="🟢 LULUS";
 
-status="🟢 LULUS
+}
+
+else if(akhir>=65){
+
+huruf="C";
+status="🟢 LULUS";
+
+}
+
+else if(akhir>=50){
+
+huruf="D";
+status="🟡 LULUS";
+
+}
+
+else{
+
+huruf="E";
+status="🔴 TIDAK LULUS";
+
+}
+
+document.getElementById("hasil").style.display="block";
+
+document.getElementById("hasilNama").innerHTML=data.nama;
+document.getElementById("hasilNim").innerHTML=data.nim;
+document.getElementById("makalah").innerHTML=data.makalah;
+document.getElementById("artikel1").innerHTML=data.artikel1;
+document.getElementById("artikel2").innerHTML=data.artikel2;
+document.getElementById("uts").innerHTML=data.uts;
+document.getElementById("uas").innerHTML=data.uas;
+document.getElementById("akhir").innerHTML=akhir;
+document.getElementById("huruf").innerHTML=huruf;
+document.getElementById("status").innerHTML=status;
+
+}
+
+</script>
