@@ -328,3 +328,24 @@ text-align:left;
 background:#0b5ed7;
 color:#fff;
 }
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+table th{
+    background:#0b6efd;
+    color:white;
+}
+
+#hasil{
+    overflow-x:auto;
+}
