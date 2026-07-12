@@ -374,3 +374,23 @@ table th{
 #hasil{
     overflow-x:auto;
 }
+/* Tabel Nilai */
+#hasil table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#hasil th,
+#hasil td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;   /* Semua isi tabel rata tengah */
+    vertical-align: middle;
+}
+
+#hasil th {
+    background: #0d6efd;
+    color: white;
+    font-weight: bold;
+}
