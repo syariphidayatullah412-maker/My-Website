@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal Perkuliahan - Nilai</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="logo">
+<img src="Logo.png" alt="Logo UIN">
+</div>
+
+<header>
+
+<h1>UNIVERSITAS ISLAM NEGERI MATARAM</h1>
+
+<h2>📊 Portal Perkuliahan</h2>
+
+<h3>Nilai Mata Kuliah</h3>
+
+<p>Program Studi Pendidikan Agama Islam</p>
+
+</header>
+
+<button class="menu-toggle" onclick="toggleMenu()">
+
+☰ Menu
+
+</button>
+
+<nav id="menu">
+
+<a href="index.html">🏠 Beranda</a>
+
+<a href="mahasiswa.html">👨‍🎓 Mahasiswa</a>
+
+<a href="absensi.html">📅 Absensi</a>
+
+<a href="materi.html">📚 Materi</a>
+
+<a href="tugas.html">📝 Tugas</a>
+
+<a href="uts.html">📖 UTS</a>
+
+<a href="uas.html">🎓 UAS</a>
+
+<a href="nilai.html">📊 Nilai</a>
+
+<a href="pengumuman.html">📢 Pengumuman</a>
+
+</nav>
+
+<div class="container">
+
+<div class="card intro-card">
+
+<h1>📊 Cek Nilai Mahasiswa</h1>
+
+<p>
+
+Masukkan <strong>Nama</strong> dan <strong>NIM</strong> untuk melihat hasil penilaian Mata Kuliah <strong>Fiqih & Ushul Fiqih</strong>.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🔍 Pencarian Nilai</h2>
+
+<label><strong>Nama Mahasiswa</strong></label>
+
+<input type="text" id="nama" placeholder="Masukkan Nama">
+
+<br><br>
+
+<label><strong>NIM</strong></label>
+
+<input type="text" id="nim" placeholder="Masukkan NIM">
+
+<br><br>
+
+<button class="btn" onclick="cekNilai()">
+
+🔍 Cari Nilai
+
+</button>
+
+</div>
+
+<div class="card" id="hasil" style="display:none;">
+
+<h2>📄 Hasil Penilaian</h2>
+
+<table>
+
+<tr>
+
+<td><strong>Nama</strong></td>
+
+<td id="hasilNama"></td>
+
+</tr>
+
+<tr>
+
+<td><strong>NIM</strong></td>
+
+<td id="hasilNim"></td>
+
+</tr>
+
+<tr>
+
+<td><strong>Mata Kuliah</strong></td>
+
+<td>Fiqih & Ushul Fiqih</td>
+
+</tr>
+
+</table>
+
+<hr>
+
+<table>
+
+<tr>
+
+<th>Komponen Penilaian</th>
+
+<th>Nilai</th>
+
+</tr>
+
+<tr>
+
+<td>Makalah</td>
+
+<td id="makalah"></td>
+
+</tr>
+
+<tr>
+
+<td>Artikel 1</td>
+
+<td id="artikel1"></td>
+
+</tr>
+
+<tr>
+
+<td>Artikel 2</td>
+
+<td id="artikel2"></td>
+
+</tr>
+
+<tr>
+
+<td>UTS</td>
+
+<td id="uts"></td>
+
+</tr>
+
+<tr>
+
+<td>UAS</td>
+
+<td id="uas"></td>
+
+</tr>
+
+<tr>
+
+<th>Nilai Akhir</th>
+
+<th id="akhir"></th>
+
+</tr>
+
+<tr>
+
+<th>Huruf Mutu</th>
+
+<th id="huruf"></th>
+
+</tr>
+
+<tr>
+
+<th>Status</th>
+
+<th id="status"></th>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+<footer>
+
+<p><strong>Portal Perkuliahan Fiqih & Ushul Fiqih</strong></p>
+
+<p>Program Studi Pendidikan Agama Islam</p>
+
+<p>Universitas Islam Negeri Mataram</p>
+
+<p>Dosen Pengampu:</p>
+
+<p>Drs. Ziyad, M.Ag.</p>
+
+<p>Syarip Hidayatullah, M.Pd.</p>
+
+<p>© 2026 Hak Cipta Dilindungi</p>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+const mahasiswa=[
+
+{
+nama:"Ahmad Fauzi",
+nim:"230101001",
+makalah:85,
+artikel1:88,
+artikel2:90,
+uts:84,
+uas:91
+},
+
+{
+nama:"Siti Aisyah",
+nim:"230101002",
+makalah:90,
+artikel1:92,
+artikel2:89,
+uts:88,
+uas:94
+},
+
+{
+nama:"Muhammad Rizki",
+nim:"230101003",
+makalah:78,
+artikel1:80,
+artikel2:82,
+uts:79,
+uas:81
+}
+
+];
+
+function cekNilai(){
+
+const nama=document.getElementById("nama").value.trim().toLowerCase();
+
+const nim=document.getElementById("nim").value.trim();
+
+const data=mahasiswa.find(m=>
+
+m.nama.toLowerCase()===nama &&
+
+m.nim===nim
+
+);
+
+if(!data){
+
+alert("Data mahasiswa tidak ditemukan.");
+
+document.getElementById("hasil").style.display="none";
+
+return;
+
+}
+
+const akhir=Math.round(
+
+(data.makalah+
+
+data.artikel1+
+
+data.artikel2+
+
+data.uts+
+
+data.uas)/5
+
+);
+
+let huruf="E";
+
+let status="🔴 BELUM LULUS";
+
+if(akhir>=85){
+
+huruf="A";
+
+status="🟢 LULUS";
+
+}
+
+else if(akhir>=75){
+
+huruf="B";
+
+status="🟢 LULUS
