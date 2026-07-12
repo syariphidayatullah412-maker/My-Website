@@ -5,20 +5,19 @@ judul: "📢 Jadwal Ujian Akhir Semester (UAS)",
 tanggal: "20 Juli 2026",
 
 isi: `
-Pelaksanaan Ujian Akhir Semester Mata Kuliah
-Fiqih & Ushul Fiqih akan dilaksanakan pada
-hari Senin, 20 Juli 2026 pukul 08.00 WITA.
+<p>Pelaksanaan Ujian Akhir Semester Mata Kuliah
+<strong>Fiqih & Ushul Fiqih</strong> akan dilaksanakan pada
+hari <strong>Senin, 20 Juli 2026</strong> pukul <strong>08.00 WITA</strong>.</p>
 
-Mahasiswa diwajibkan:
+<p><strong>Mahasiswa diwajibkan:</strong></p>
 
-✔ Hadir 15 menit sebelum ujian dimulai.
-
-✔ Membawa KTM.
-
-✔ Berpakaian rapi dan sopan sesuai ketentuan kampus.
-
-✔ Tidak diperkenankan mengikuti ujian apabila terlambat lebih dari 30 menit.
-`,
+<ul>
+<li>✔ Hadir 15 menit sebelum ujian dimulai.</li>
+<li>✔ Membawa KTM.</li>
+<li>✔ Berpakaian rapi dan sopan sesuai ketentuan kampus.</li>
+<li>✔ Tidak diperkenankan mengikuti ujian apabila terlambat lebih dari 30 menit.</li>
+</ul>
+`,`,
 
 update: "12 Juli 2026"
 
